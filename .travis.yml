@@ -3,4 +3,15 @@ cache:
   directories:
   - $HOME/.m2
 
-script: mvn clean install sonar:sonar -Dsonar.host.url=http://142.93.102.95:9000 -Dsonar.login=16924d6fbc853bac6727ea498c13f74a607cfcd4
+#own sonarQube
+#script: mvn clean install sonar:sonar -Dsonar.host.url=http://142.93.102.95:9000 -Dsonar.login=16924d6fbc853bac6727ea498c13f74a607cfcd4
+
+
+addons:
+  sonarcloud:
+    organization: "arcyro-github" # the key of the org you chose at step #3
+    token:
+      secure: SONAR_TOKEN # encrypted value of your token
+script:
+  # the following command line builds the project, runs the tests with coverage and then execute the SonarCloud analysis
+  - mvn clean org.jacoco:jacoco-maven-plugin:prepare-agent install sonar:sonar
