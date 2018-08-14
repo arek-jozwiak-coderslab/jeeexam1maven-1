@@ -1,0 +1,21 @@
+Digital Ocean github pack code
+Your code: 2018GITHUB50-a9d5bc90
+
+sonarQube on digitalocean:
+http://142.93.102.95:9000
+
+sonarQube token:
+jeeexam1maven: 16924d6fbc853bac6727ea498c13f74a607cfcd4
+
+mvn sonar:sonar \
+  -Dsonar.host.url=http://142.93.102.95:9000 \
+  -Dsonar.login=16924d6fbc853bac6727ea498c13f74a607cfcd4
+
+
+sonarcloud:
+jeeexam1maven: a0ff2d054a94a13a2064b6c53aa7a83dd659ed19
+
+mvn sonar:sonar \
+  -Dsonar.organization=arcyro-github \
+  -Dsonar.host.url=https://sonarcloud.io \
+  -Dsonar.login=202a2a456e07ffa2bf0e34667a0cc8a96ab06a2c
