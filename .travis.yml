@@ -3,6 +3,7 @@ cache:
   directories:
   - $HOME/.m2
 
-script: mvn clean install sonar:sonar mvn sonar:sonar \
-                                        -Dsonar.host.url=http://142.93.102.95:9000 \
-                                        -Dsonar.login=16924d6fbc853bac6727ea498c13f74a607cfcd4
+script: mvn clean install
+#sonar:sonar mvn sonar:sonar \
+#                                        -Dsonar.host.url=http://142.93.102.95:9000 \
+#                                        -Dsonar.login=16924d6fbc853bac6727ea498c13f74a607cfcd4
